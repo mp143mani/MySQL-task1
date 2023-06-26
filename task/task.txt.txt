@@ -1,0 +1,30 @@
+1.Get all media (videos and images) for a movie:         SELECT * FROM Media WHERE movie_id = <movie_id>;
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2.Get all genres of a movie:     
+
+SELECT Genre.genre_name FROM Genre 
+JOIN Movie_Genre ON Genre.genre_id = Movie_Genre.genre_id 
+WHERE Movie_Genre.movie_id = <movie_id>;
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3.Get all reviews for a movie
+SELECT * FROM Review WHERE movie_id = <movie_id>;
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4.Get all reviews by a specific user:
+SELECT * FROM Review WHERE user_id = <user_id>;
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+5.Get all skills of an artis
+SELECT Skill.skill_name FROM Skill 
+JOIN Artist_Skill ON Skill.skill_id = Artist_Skill.skill_id 
+WHERE Artist_Skill.artist_id = <artist_id>;
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+6.Get all roles performed by an artist in a film:
+SELECT * FROM Film_Role WHERE artist_id = <artist_id> AND movie_id = <movie_id>;
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
