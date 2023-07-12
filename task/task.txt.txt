@@ -1,3 +1,55 @@
+
+1.Movie table:
+          movie_id (Primary Key)
+          title
+          release_date
+          duration
+          other movie-related attributes...
+
+2.Media table:
+         media_id (Primary Key)
+         movie_id (Foreign Key referencing Movie table)
+         media_type (e.g., video, image)
+         media_url
+         other media-related attributes...
+3.Genre table:
+        genre_id (Primary Key)
+        genre_name
+        Movie_Genre table (Many-to-Many relationship between Movie and Genre):
+        movie_id (Foreign Key referencing Movie table)
+        genre_id (Foreign Key referencing Genre table)
+4.Review table:
+       review_id (Primary Key)
+       movie_id (Foreign Key referencing Movie table)
+       user_id (Foreign Key referencing User table)
+       rating
+       review_text
+       other review-related attributes...
+5.User table:
+       user_id (Primary Key)
+       username
+       email
+       other user-related attributes...
+6.Artist table:
+       artist_id (Primary Key)
+       artist_name
+       other artist-related attributes...
+7.Skill table:
+       skill_id (Primary Key)
+       skill_name
+       Artist_Skill table (Many-to-Many relationship between Artist and Skill):
+       artist_id (Foreign Key referencing Artist table)
+       skill_id (Foreign Key referencing Skill table)
+8.Film_Role table:
+      film_role_id (Primary Key)
+      movie_id (Foreign Key referencing Movie table)
+      artist_id (Foreign Key referencing Artist table)
+      role_name
+      other role-related attributes...
+
+
+
+
 1.Get all media (videos and images) for a movie:         SELECT * FROM Media WHERE movie_id = <movie_id>;
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 2.Get all genres of a movie:     
